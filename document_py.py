@@ -315,8 +315,8 @@ def folder_to_parquet(in_folder, label_folder, out_filename, batch_size=100, ret
                     return total_rows
                 return
 
-in_folder = r'C:\Users\daand\work\POC_direct\demo_11_6\dataset\Lschijf_met_autorisatiematrix'
-label_folder = r'C:\Users\daand\work\POC_direct\demo_11_6\dataset\Lschijf_met_autorisatiematrix_gelabeld'
+in_folder = r'.\test\dataset\Lschijf_met_autorisatiematrix'
+label_folder = r'.\test\dataset\Lschijf_met_autorisatiematrix_gelabeld'
 train_test_filename = 'train_test.parquet'
 n_files = folder_to_parquet(in_folder, label_folder, train_test_filename, batch_size=500, return_n_files=True)
 
