@@ -315,8 +315,10 @@ def folder_to_parquet(in_folder, label_folder, out_filename, batch_size=100, ret
                     return total_rows
                 return
 
-in_folder = r'.\test\dataset\Lschijf_met_autorisatiematrix'
-label_folder = r'.\test\dataset\Lschijf_met_autorisatiematrix_gelabeld'
+file_name = __file__.split('\\')[-1]
+path = __file__.replace(file_name, '')
+in_folder = path + "\test\dataset\Lschijf_met_autorisatiematrix"
+label_folder = path + "\test\dataset\Lschijf_met_autorisatiematrix_gelabeld"
 train_test_filename = 'train_test.parquet'
 n_files = folder_to_parquet(in_folder, label_folder, train_test_filename, batch_size=500, return_n_files=True)
 
